@@ -6,7 +6,8 @@
       <!-- @generated extlibrary -->
       <package
             uri="http:///org/eclipse/emf/examples/library/extlibrary.ecore/1.0.0"
-            class="org.eclipse.emf.examples.extlibrary.EXTLibraryPackage"/>
+            class="org.eclipse.emf.examples.extlibrary.EXTLibraryPackage"
+            genModel="model/extlibrary.genmodel"/>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.content_parser">
