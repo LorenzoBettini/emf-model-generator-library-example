@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?pde version="3.8"?>
+<target name="EMF Model Generator Target Platform" sequenceNumber="1">
+	<locations>
+		<location includeAllPlatforms="false"
+			includeConfigurePhase="true"
+			includeMode="planner"
+			includeSource="true"
+			type="InstallableUnit">
+			<unit id="org.eclipse.pde.feature.group" version="0.0.0" />
+			<unit id="org.eclipse.sdk" version="0.0.0" />
+			<unit id="org.eclipse.emf.sdk.feature.group" version="0.0.0" />
+			<repository location="https://download.eclipse.org/releases/2026-06" />
+		</location>
+		<location includeAllPlatforms="false"
+			includeConfigurePhase="true"
+			includeMode="planner"
+			includeSource="true"
+			type="InstallableUnit">
+			<unit id="emf.model.generator.feature.feature.group" version="0.0.0" />
+			<repository location="https://lorenzobettini.github.io/emf-model-generator-update-site/" />
+		</location>
+	</locations>
+</target>
