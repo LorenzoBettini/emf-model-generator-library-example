@@ -71,24 +71,66 @@ dependencies are managed by the Eclipse target platform.
 
 ## Run the example
 
-1. Clone this repository and start Eclipse with Java 21 or newer.
-2. Choose **File → Import → General → Existing Projects into Workspace** and
-   import all four projects from the repository root.
-   (Expect compilation errors until the target platform is resolved.)
-3. Open
-   [`emf.model.generator.targetplatform.target`](org.eclipse.emf.examples.library.targetplatform/emf.model.generator.targetplatform.target),
-   wait for its contents to resolve, and click **Set as Active Target Platform**.
-4. Open `org.eclipse.emf.examples.library.editor/plugin.xml` and choose
-   **Run As → Eclipse Application**.
-5. In the launched Eclipse instance, create a (general) project if the workspace has none.
-6. Choose **File → New → Other… → Example EMF Model Creation Wizards →
-   EXTLibrary Model**.
-7. Select the project as the container, keep the `.extlibrary` extension, and
-   choose **Library** as the model object.
+### 1. Import and resolve the target platform
 
-When the wizard finishes, it creates and opens a populated model. Expand the
-root in the generated editor to inspect the writers, employees, borrowers,
-stock, and nested library branches created by the populator.
+Clone this repository and start Eclipse with Java 21 or newer. Choose **File →
+Import → General → Existing Projects into Workspace** and import all four
+projects from the repository root. Expect compilation errors until the target
+platform is resolved.
+
+Open
+[`emf.model.generator.targetplatform.target`](org.eclipse.emf.examples.library.targetplatform/emf.model.generator.targetplatform.target).
+Eclipse first downloads and resolves the Eclipse, EMF, PDE, and EMF Model
+Generator dependencies. The status bar shows the resolution progress:
+
+![Eclipse resolving the EMF Model Generator target platform](images/target-platform-resolving.png)
+
+When the installable units appear under **Locations**, click **Set as Active
+Target Platform**:
+
+![Resolved target platform with Eclipse and EMF Model Generator dependencies](images/target-platform-resolved.png)
+
+Wait for Eclipse to rebuild the workspace before continuing.
+
+### 2. Launch the example plug-ins
+
+Open `org.eclipse.emf.examples.library.editor/plugin.xml` and choose **Run As →
+Run Configurations…**. Create or select an **Eclipse Application** configuration.
+On the **Main** tab, use the Eclipse IDE product and a Java 21 JRE. You can also
+choose a dedicated runtime workspace here:
+
+![Eclipse Application run configuration for the library example](images/Run_As_Eclipse_Application.png)
+
+On the **Plug-ins** tab, ensure the "All workspace and Enabled Target Plug-ins" option is selected, followed by **Validate Plug-ins**
+to ensure that both the example and `emf-model-generator` bundles are available:
+
+![Adding the required plug-ins to the Eclipse Application launch](images/Run_As_Eclipse_Application-required-plugins.png)
+
+Click **Run** to start a second Eclipse instance containing the example editor.
+
+### 3. Create a populated Extended Library model
+
+In the launched Eclipse instance, create a general project if the runtime
+workspace does not already contain one. Then choose **File → New → Other…**, open
+**Example EMF Model Creation Wizards**, select **EXTLibrary Model**, and click
+**Next**:
+
+![Selecting the EXTLibrary Model creation wizard](images/create_a_new_library-model-1.png)
+
+Select the project as the parent folder, enter a file name with the
+`.extlibrary` extension, and click **Next**:
+
+![Choosing the parent project and EXTLibrary model file name](images/create_a_new_library-model-2.png)
+
+Choose **Library** as the model object and click **Finish**:
+
+![Choosing Library as the root model object](images/create_a_new_library-model-3.png)
+
+The wizard creates the file and opens it in the generated tree editor. Expand
+the root to inspect the writers, employees, borrowers, stock, and nested library
+branches created by `EMFInstancePopulator`:
+
+![Populated Extended Library model open in the generated editor](images/create_a_new_library-model-4.png)
 
 ## Project layout
 
