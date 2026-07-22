@@ -80,7 +80,7 @@ dependencies are managed by the Eclipse target platform.
    wait for its contents to resolve, and click **Set as Active Target Platform**.
 4. Open `org.eclipse.emf.examples.library.editor/plugin.xml` and choose
    **Run As → Eclipse Application**.
-5. In the launched Eclipse instance, create a project if the workspace has none.
+5. In the launched Eclipse instance, create a (general) project if the workspace has none.
 6. Choose **File → New → Other… → Example EMF Model Creation Wizards →
    EXTLibrary Model**.
 7. Select the project as the container, keep the `.extlibrary` extension, and
