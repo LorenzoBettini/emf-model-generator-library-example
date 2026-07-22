@@ -61,7 +61,7 @@ project's [p2 update site](https://lorenzobettini.github.io/emf-model-generator-
 
 ## Requirements
 
-- Eclipse IDE with Plug-in Development Environment (PDE)
+- Eclipse IDE with Plug-in Development Environment (PDE); we suggest the **Eclipse Modeling Tools** distribution package, which includes EMF and PDE.
 - Java 21 or newer
 - Internet access the first time the target platform is resolved
 
