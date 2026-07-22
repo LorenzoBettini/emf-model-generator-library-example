@@ -74,6 +74,7 @@ dependencies are managed by the Eclipse target platform.
 1. Clone this repository and start Eclipse with Java 21 or newer.
 2. Choose **File → Import → General → Existing Projects into Workspace** and
    import all four projects from the repository root.
+   (Expect compilation errors until the target platform is resolved.)
 3. Open
    [`emf.model.generator.targetplatform.target`](org.eclipse.emf.examples.library.targetplatform/emf.model.generator.targetplatform.target),
    wait for its contents to resolve, and click **Set as Active Target Platform**.
